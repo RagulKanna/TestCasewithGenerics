@@ -53,4 +53,25 @@ class MaximumTest {
         String max=GetMaximum.getmaximum("banana","apple","peaches");
         Assert.assertEquals("peaches",max);
     }
+
+    @Test
+    public void checkmaximumIntegerwithClass() {
+        GetMaximum getmax =new GetMaximum(5,6,2);
+        int max=(int)(getmax.getmaximum());
+        Assert.assertEquals(6,max);
+    }
+
+    @Test
+    public void checkmaximumFloatrwithClass() {
+        GetMaximum getmax =new GetMaximum(5.5f,6.98f,2.05f);
+        float max=(float)(getmax.getmaximum());
+        Assert.assertEquals(6.98f,max,0.0f);
+    }
+
+    @Test
+    public void checkmaximumStringwithClass() {
+        GetMaximum getmax =new GetMaximum("apple","peaches","banana");
+        String max=(String)(getmax.getmaximum());
+        Assert.assertEquals("peaches",max);
+    }
 }
