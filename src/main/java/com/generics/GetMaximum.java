@@ -2,16 +2,20 @@ package com.generics;
 
 public class GetMaximum {
 
-    public static Float getmaximum(Float a,Float b,Float c)
+    public static void main(String[] args) {
+        String a="apple",b="peaches",c="banana";
+        getmaximum(a,b,c);
+    }
+    public static String getmaximum(String a,String b,String c)
     {
-        Float max=a;
+        String max=a;
         if(b.compareTo(max) > 0 && b.compareTo(c) > 0)
             max=b;
         else if(c.compareTo(max) > 0)
             max=c;
 
 
-        //System.out.println(max);
+       // System.out.println(max);
         return max;
     }
 
