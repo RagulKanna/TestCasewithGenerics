@@ -4,6 +4,7 @@ package com.generics;
     public class GetMaximummorethanThreeNumber<E extends Comparable> {
 
         E[] inputarray;
+        E max;
         GetMaximummorethanThreeNumber(E[] inputarray)
         {
             this.inputarray=inputarray;
@@ -28,5 +29,15 @@ package com.generics;
             }
 
             return max;
+        }
+
+        public static<E> void printarray(E[] inputarray,E max)
+        {
+            System.out.print("Maximum of the following array { ");
+            for(E element : inputarray) {
+                System.out.printf("%s ", element);
+            }
+            System.out.println("} is "+max);
+            System.out.println();
         }
 }
